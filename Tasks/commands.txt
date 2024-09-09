@@ -1,0 +1,81 @@
+## Installing PyEnv for Python Virtual Environments:
+
+which python
+which python3
+
+python -V
+python3 -V
+
+sudo apt update
+sudo apt-get update
+
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
+
+curl https://pyenv.run | bash
+sudo curl https://pyenv.run | bash
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+echo 'eval "$(pyenv init -)"' >> ~/.profile
+
+exec "$SHELL"
+
+pyenv
+pyenv --version
+pyenv install -l
+python -V
+python3 -V
+
+pyenv install -l
+pyenv install 3.12.6
+
+cd dev
+cd web-app-demo
+
+pyenv local 3.12.6
+
+<< web-app-demo folder now running under pyenv venv 3.12.6>>
+
+pip -V
+pip install flask
+
+
+## Development of initial Fask module
+
+<< in VSCode, create Python Flask app >>
+<< To test application >>
+
+export FLASK_APP=web-app
+export FLASK_ENV=development
+flask run
+ << check running in browser http://127.0.0.1:5000 >>
+
+## Create Git Repo
+
+<< Log into GitHub.com and create a new (empty) repo called 'web-app-demo' >>
+
+cd web-app-demo
+git init
+git add .
+
+git config --global user.email "dave@hobbs-family.com"
+git config --global user.name "Hobbster"
+
+git commit -m "initial commit"
+
+touch .gitignore
+git add .
+git commit -m "adding gitignore file to project"
+
+git branch -M main
+git remote add origin https://github.com/Hobbster/web-app-demo.git
+git push -u origin main
+
+git rm -r --cached __pycache__
+git commit -m "remove cached __pycache__ after inclusion to .gitignore"
+git push -u origin main
