@@ -79,3 +79,41 @@ git push -u origin main
 git rm -r --cached __pycache__
 git commit -m "remove cached __pycache__ after inclusion to .gitignore"
 git push -u origin main
+
+## Configure GitHub Repo for GitFlow (Branch & Tag Rulesets)
+
+Add Ruleset for Branches & Tags
+Create develop & main protection etc.
+
+Example here:   https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212
+                https://github.com/github/ruleset-recipes/tree/main
+                https://medium.com/android-news/gitflow-with-github-c675aa4f606a
+                https://danielkummer.github.io/git-flow-cheatsheet/
+                https://medium.com/@jojoooo/building-an-automatic-ci-cd-using-gitflow-with-github-actions-buildpack-artifact-registry-and-43312196cbd8
+
+
+## Create first feature/branch (feature/convert-to-gitflow)
+## Update feature branch with changes
+
+## Add custom .gitignore file
+
+Add a custom .gitignore generated from gitignore.io for this development environment (linux,python,flask,visualstudiocode,ansible,terraform):
+# Created by https://www.toptal.com/developers/gitignore/api/linux,python,flask,visualstudiocode,ansible,terraform
+
+## Include pip dependencies in a Requirements.txt file for pipeline installation
+pip list
+pip freeze > requirements.txt
+
+## PR \ Merge into develop
+
+
+
+
+
+
+#### TO DO! ####
+
+Update GitHub Repo with a Pull Request template (.github/PULL_REQUEST_TEMPLATE.md) - see https://medium.com/@jojoooo/building-an-automatic-ci-cd-using-gitflow-with-github-actions-buildpack-artifact-registry-and-43312196cbd8
+
+
+
