@@ -92,6 +92,9 @@ Example here:   https://gist.github.com/rsp/057481db4dbd999bb7077f211f53f212
                 https://medium.com/@jojoooo/building-an-automatic-ci-cd-using-gitflow-with-github-actions-buildpack-artifact-registry-and-43312196cbd8
 
 
+## Create first feature/branch (feature/convert-to-gitflow)
+## Update feature branch with changes
+
 ## Add custom .gitignore file
 
 Add a custom .gitignore generated from gitignore.io for this development environment (linux,python,flask,visualstudiocode,ansible,terraform):
@@ -100,6 +103,11 @@ Add a custom .gitignore generated from gitignore.io for this development environ
 ## Include pip dependencies in a Requirements.txt file for pipeline installation
 pip list
 pip freeze > requirements.txt
+
+## PR \ Merge into develop
+
+
+
 
 
 
