@@ -106,6 +106,23 @@ pip freeze > requirements.txt
 
 ## PR \ Merge into develop
 
+## Create feature/branch (feature/add-first-unit-tests)
+## Update feature branch with changes
+
+# Create a tests folder to hold unit tests
+
+# test flask app is working with curl
+export FLASK_APP=web-app
+export FLASK_ENV=development
+export FLASK_DEBUG=1
+flask run
+
+curl http://127.0.0.1:5000/
+curl http://127.0.0.1:5000/about/
+
+pip install pytest
+pip list
+pip freeze > requirements.txt
 
 
 
