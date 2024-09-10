@@ -80,5 +80,8 @@ git rm -r --cached __pycache__
 git commit -m "remove cached __pycache__ after inclusion to .gitignore"
 git push -u origin main
 
-
 ## Configure GitHub Repo for GitFlow (Branch & Tag Rulesets)
+
+Add Ruleset for Branches & Tags
+Create develop & main protection etc.
+
